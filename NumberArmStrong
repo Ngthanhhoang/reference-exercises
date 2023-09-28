@@ -1,0 +1,33 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int dem(int n){
+    int count=0;
+    while (n>0){
+        n/=10;
+        ++count;
+    }
+    return count;
+}
+bool demso(int n){
+    int sodigit = dem(n);
+    int bnhieu=n, sum=0, kq;
+    while (bnhieu>0){
+        kq=bnhieu %10;
+        bnhieu /=10;
+        sum +=pow(kq,sodigit);
+    }
+    if(sum==n) return true;
+    return false;
+}
+int main(){
+    int n;
+    cout<<"nhap n "<<endl;
+    cin>>n;
+    if (demso(n)==true)
+    {
+        cout<<"YES";
+    }else{
+        cout<<"NO";
+    }
+}
