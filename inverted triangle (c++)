@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int chieucao; 
+	cout<<"nhap chieu cao :"<<endl;
+	cin>>chieucao;
+	 
+	for (int i=1; i<=chieucao; i++){
+		for (int kcach=1; kcach<=i; kcach++ ){
+			cout<<" "; 
+		}
+		for (int kcach=1; kcach<=(chieucao*2-(2*i-1)); kcach++ ){
+			cout<<"*"; 
+		}
+		cout<<endl; 
+	}
+	return 0; 
+} 
