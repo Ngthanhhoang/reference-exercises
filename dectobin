@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main(){
+	int dec;
+	cout<<"nhap so :"; 
+	
+	cin>>dec;
+	int p=0;
+	int chuyendoi =0;
+	while (dec>0){
+		chuyendoi+=(dec%10)*pow(2,p);
+		++p;
+		dec/=10; 
+		
+		
+	} 
+	 cout<<chuyendoi;
+	 return 0; 
+	
+} 
